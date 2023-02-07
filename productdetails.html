@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> single product</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<!---nav bar-->
+
+  <div class="container">
+
+     <div class="header">
+          <div class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" width="125px">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="product.html">product</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="account.html">account</a></li>
+        </ul>
+    </nav>
+
+
+     </div>
+</div>
+
+ `<div class="small-container single-product">
+     <div class="row">
+         <div class="col-2">
+             <img src="images/gallery-1.jpg" width="100%" id="productImg">
+             <div class="small-img-row">
+                 <div class="small-img-col">
+                     <img src="images/gallery-1.jpg" width="100%" class="small-img" name="smalli">
+                 </div>
+                 <div class="small-img-col">
+                    <img src="images/gallery-2.jpg" width="100%" class="small-img" name="smalli">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/gallery-3.jpg" width="100%" class="small-img" name="smalli">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/gallery-4.jpg" width="100%" class="small-img" name="smalli">
+                </div>
+             </div>
+         </div>
+         <div class="col-2">
+             <p>Home/T-Shirts</p>
+             <h1>T-Shirts by Enjoy Dude</h1>
+             <h4>$50.00</h4>
+             <select >
+                 <option value="">SELECT SIZE</option>
+                 <option value="">XXL</option>
+                 <option value="">XL</option>
+                 <option value="">LARGE</option>
+                 <option value="">MEDIUM</option>
+                 <option value="">SMALL</option>
+                </select>
+                <INPUT type="NUMBER" value="1">      
+                 <A href="" class="btn">Buy NOW💳</A>
+                 <h3>product Details</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur
+                      adipisicing elit. Odit deserunt quisquam error quos nemo, temporibus totam placeat perspiciatis, laudantium impedit vitae fugit! Praesentium, nobis optio obcaecati
+                     odio dolorem labore iusto?</p>
+
+            </div>
+     </div>
+ </div>
+
+    <!-----FOOTER----->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>
+                        Download our app
+                    </h3>
+                    <p>DOwnload app for mobile and Ios</p>
+                    <div class="applogo">
+                    <img src="images/app-store.png" alt="">
+                    <img src="images/play-store.png" alt="">
+                 </div>
+                </div>
+                <div class="footer-col-2">
+                <img src="images/logo-white.png" >
+                 <p>DOwnload app for mobile and Ios</p>
+             </div>
+             <div class="footer-col-3">
+                 <h3>
+                  Useful links
+                 </h3>
+                 <ul>
+                     <li>copuons</li>
+                     <li>blogs post</li>
+                     <li>return policy</li> 
+                     <li>join affliate</li>
+                     
+
+                 </ul>
+
+             </div>
+             <div class="footer-col-3">
+                 <h3>
+                 Follow us
+                 </h3>
+                 <ul>
+                     <li>Facebook</li>
+                     <li>TWITTER</li>
+                     <li>iNSTAGRAM</li> 
+                     <li>YOU TUBE</li>
+                     
+
+                 </ul>
+
+             </div>
+         
+         
+            </div>
+            <hr>
+            <p class="ct">CopyRight 2020 ------ Nothings</p>
+        </div>
+    </div>
+
+
+
+ <script>
+
+     var productImg=document.getElementById("productImg");
+     var smallImg=document.getElementsByClassName("small-img");
+
+     smallImg[0].onclick=function(){
+         productImg.src=smallImg[0].src;
+
+     }
+     smallImg[1].onclick=function(){
+         productImg.src=smallImg[1].src;
+         
+     }
+     smallImg[2].onclick=function(){
+         productImg.src=smallImg[2].src;
+         
+     }
+     smallImg[3].onclick=function(){
+         productImg.src=smallImg[3].src;
+         
+     }
+ </script>
+
+</html>

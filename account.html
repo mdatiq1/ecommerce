@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account section</title>
+  
+    <!---css here-->
+  <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+     /*nav bar*/
+     .navbar{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+
+}
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+nav ul{
+    display: inline-block;
+   list-style-type: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+
+}
+.menu-toggles{
+    margin-left: 1rem;
+    width: 1.5rem;
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: #555;
+
+} 
+        
+    /*original page*/
+
+      .account-page{
+          padding: 50px 0;
+          background: radial-gradient(#fff,#ffd6d6);
+
+      }
+      .form-container{
+          background: #fff;
+          width: 300px;
+          height: 400px;
+          position: relative;
+          text-align: center;
+          padding: 25px 0;
+          margin-left: 45%;
+          margin-top: -150%;
+          box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+          overflow: hidden;
+        }
+        .btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin:30px 0;
+    border-radius: 30px;
+    transition :background 0.5s  ;
+}
+     
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+
+} 
+ .form-container form{
+     max-width: 300px;
+     padding: 0 20px;
+     position: absolute;
+     top: 130px;
+     transition: transform 1s;
+
+ }
+ form input{
+     width: 100%;
+     height: 30px;
+     margin: 10px 0;
+     padding: 0 10px;
+     border: 1px soild #ccc;
+ }
+  form .btn{
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+  }
+  form .btn:focus{
+      outline: none;
+  }
+  #login-form{
+      left: -300px;
+
+  }
+  #reg-form{
+      left: 0;
+
+  }
+  #indicator{
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  margin-top:8px ;
+  transform: translateX(100px);
+  transition: transform 1s;
+  }
+    
+   /* page footer*/
+   .footer{
+    height: 300px;
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+ul{
+    list-style-type: none;
+}
+
+.applogo{
+    margin-top: 20px;
+
+
+}
+.applogo img{
+    width: 140px;
+}
+.ct{
+    margin-left: 10px 15px;
+    font-size: 15px;
+}
+.row{
+    display: flex;
+     align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+
+}
+
+/*query for screens*/
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #555;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+     
+    }
+    nav ul li a{
+        color:#fff;
+ 
+    }
+    .menu-toggles{
+        display: block;
+        cursor: pointer;
+        overflow: ;
+    }
+
+}
+
+/*  media query for less than 600 screen size*/
+@media only screen and (max-width:600px){
+    .row{
+        text-align: center;
+    }
+    .col2,.col3, .col4 , .col-5{
+        flex-basis: 150%;
+    }
+}
+
+  </style>
+
+</head>
+
+<body>
+
+   <!----nav bar-->
+   <div class="navbar">
+   <div class="logo">
+       <img src="images/logo.png" width="125px">
+      
+   </div>
+   <nav>
+       <ul id="menu-items">
+           <li><a href="home.html">Home</a></li>
+           <li><a href="product.html">product</a></li>
+           <li><a href="">about</a></li>
+           <li><a href="">contact</a></li>
+           <li><a href="account.html">account</a></li>
+       </ul>
+   </nav>
+   <img src="images/cart.png" width="30px" height="30px">
+   <img src="images/menu.png "class="menu-toggles" onclick="menubar()">
+</div>
+
+    
+
+    <!----page original section--->
+    <div class="account-page">
+        <div class="conatainer">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" width="50%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                         <form action="" id="login-form">
+                             <input type="text" placeholder="username">
+                             <input type="password" placeholder="password">
+                             <button type="submit" class="btn">login</button>
+                             <a href="">Forgot password</a>
+                         </form>
+
+                         <form action="" id="reg-form">
+                            <input type="text" placeholder="username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Signup</button>
+                           
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----page footer----->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>
+                        Download our app
+                    </h3>
+                    <p>DOwnload app for mobile and Ios</p>
+                    <div class="applogo">
+                    <img src="images/app-store.png" alt="">
+                    <img src="images/play-store.png" alt="">
+                 </div>
+                </div>
+                <div class="footer-col-2">
+                <img src="images/logo-white.png" >
+                 <p>DOwnload app for mobile and Ios</p>
+             </div>
+             <div class="footer-col-3">
+                 <h3>
+                  Useful links
+                 </h3>
+                 <ul>
+                     <li>copuons</li>
+                     <li>blogs post</li>
+                     <li>return policy</li> 
+                     <li>join affliate</li>
+                     
+
+                 </ul>
+
+             </div>
+             <div class="footer-col-3">
+                 <h3>
+                 Follow us
+                 </h3>
+                 <ul>
+                     <li>Facebook</li>
+                     <li>TWITTER</li>
+                     <li>iNSTAGRAM</li> 
+                     <li>YOU TUBE</li>
+                     
+
+                 </ul>
+
+             </div>
+         
+         
+            </div>
+            <hr>
+            <p class="ct">CopyRight 2020 ------ Nothings</p>
+        </div>
+    </div>
+
+
+
+    <!----js for toggle form----->
+    <script>
+        var LoginForm =document.getElementById("login-form");
+        var RegForm =document.getElementById("reg-form");
+        var Indicator=document.getElementById("indicator");
+
+        function register(){
+            RegForm.style.transform="translateX(0px)";
+            LoginForm.style.transform="translateX(0px)";
+            Indicator.style.transform="translateX(100px)";
+        }
+
+        function login(){
+           
+            RegForm.style.transform="translateX(300px)";
+            LoginForm.style.transform="translateX(300px)";
+            Indicator.style.transform="translateX(0px)";
+        }
+        
+    </script>
+     <!---nav bar query--->
+     <script>
+        var menuItems = document.getElementById("menu-items");
+      menuItems.style.maxHeight="0px";
+
+      function menubar()
+      {
+          if(menuItems.style.maxHeight=="0px")
+          {
+           menuItems.style.maxHeight="200px";
+          }
+          else
+          {
+           menuItems.style.maxHeight="0px";
+          }
+
+      }
+       </script>  
+
+</body>
+</html>
